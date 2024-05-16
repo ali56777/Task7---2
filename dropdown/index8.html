@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Invitation</title>
+<style>
+    body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+    }
+    .container {
+        max-width: 400px;
+        margin: 50px auto;
+        text-align: center;
+    }
+    .dropdown {
+        width: 100%;
+        padding: 10px;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+        font-size: 16px;
+        transition: border-color 0.3s ease;
+    }
+    .dropdown:focus {
+        border-color: #007bff;
+    }
+    .dropdown option[disabled] {
+        color: #007bff;
+    }
+</style>
+</head>
+<body>
+
+<div class="container">
+    <!-- how many guests -->
+    <select class="dropdown" id="guestCount" onchange="selectOption()">
+        <option selected disabled hidden>How many guests are you inviting?</option>
+        <option value="none">None</option>
+        <option value="2ormore">2 or more</option>
+        <option value="5ormore">5 or more</option>
+    </select>
+
+    <!-- file size -->
+    <select class="dropdown" id="fileSize" onchange="selectOption()">
+        <option selected disabled hidden>What is the maximum file size you can upload?</option>
+        <option value="5M">5 MB</option>
+        <option value="20MB">20 MB</option>
+        <option value="50MB">50 MB</option>
+    </select>
+
+    <!-- password recovery -->
+    <select class="dropdown" id="passwordRecovery" onchange="selectOption()">
+        <option selected disabled hidden>How do you prefer to recover your password?</option>
+        <option value="viaEmail">Via email</option>
+        <option value="viaPhoneNumber">Via phone number</option>
+        <option value="skipProcess">Skip the process</option>
+    </select>
+</div>
+
+<script>
+    function selectOption() {
+        var selectedOption1 = document.getElementById("guestCount").value;
+        var selectedOption2 = document.getElementById("fileSize").value;
+        var selectedOption3 = document.getElementById("passwordRecovery").value;
+        
+        if (selectedOption1 !== "") {
+            alert("Number of guests selected: " + selectedOption1);
+        }
+
+        if (selectedOption2 !== "") {
+            alert("Maximum file size selected: " + selectedOption2);
+        }
+
+        if (selectedOption3 !== "") {
+            alert("Password recovery method selected: " + selectedOption3);
+        }
+    }
+</script>
+
+</body>
+</html>

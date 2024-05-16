@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="stylesheet" href="./master.css" />
+        <title>Iphone</title>
+    </head>
+
+    <body>
+        <section class="pro">
+            <div class="co">
+                <div class="text">
+                    <h1>iphone12 promax</h1>
+                    <p>
+                      Lorem ipsum dolor sit amet consectetur adipisicing elit. Quidem ullam id possimus. Dolores sit rerum inventore accusantium eos voluptatum sint.
+                    </p>
+                </div>
+                <div class="image">
+                    <img src="./imgs/2.png" alt />
+                </div>
+            </div>
+            <div class="part">
+                <img onclick="chang()" class="img1" src="./imgs/2.png" alt>
+                <img onclick="chang2()" class="img2" src="./imgs/1.png" alt>
+                <img onclick="chang3()" class="img3" src="./imgs/3.png" alt>
+                <img onclick="chang4()" class="img4" src="./imgs/4.png" alt>
+                <img onclick="chang5()" class="img5" src="./imgs/5.png" alt>
+            </div>
+        </section>
+
+        <script>
+
+        function chang() {
+
+            let img1 = document.querySelector('.pro')
+
+            img1.style.backgroundColor = '#d6ce31'
+        }
+        function chang2() {
+
+            let img2 = document.querySelector('.pro')
+
+            img2.style.backgroundColor = '#1d515c'
+        }
+        function chang3() {
+
+            let img3 = document.querySelector('.pro')
+
+            img3.style.backgroundColor = '#1d5c34'
+        }
+        function chang4() {
+
+            let img4 = document.querySelector('.pro')
+
+            img4.style.backgroundColor = '#491d5c'
+        }
+        function chang5() {
+
+            let img5 = document.querySelector('.pro')
+
+            img5.style.backgroundColor = '#781212'
+        }
+    </script>
+    </body>
+
+</html>
